@@ -6,8 +6,9 @@ import org.ie.mizdooni.model.GlobalData;
 import org.ie.mizdooni.model.InitializerAPI;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = { SecurityAutoConfiguration.class }) // disable login to debug
 public class IeMizdooniApplication {
 
     public static void main(String[] args) {
